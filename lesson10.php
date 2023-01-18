@@ -21,19 +21,18 @@ $arr = [99, 3, 12, 45, 60, 100, 31, 7, 28];
 $arr = [99, 3, 12, 45, 60, 100, 31, 7, 28];
 
 // ここで並び替え処理
-sort($arr);
+ $array = [99, 3, 12, 45, 60, 100, 31, 7, 28];
+    $count = count($array);
+    for ($i = 0; $i < $count; $i++) {
+      for ($n = 1; $n < $count; $n++) {
+        if($array[$n-1] > $array[$n]) {
+          $temp = $array[$n];
+          $array[$n] = $array[$n-1];
+          $array[$n-1] = $temp;
+        }
+      }
+    }
+    print_r($array);
 ?>
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-<meta charset="utf-8">
-<title>数字並び替えプログラム</title>
-</head>
-<body>
-    <!-- ここに並び替え後を表示 -->
-    <?php foreach ($arr as $num) : ?>
-        <?php echo ($num),","; ?>
-    <?php endforeach ?>
-
 </body>
 </html>
